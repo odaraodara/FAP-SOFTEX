@@ -1,7 +1,7 @@
 var readlineSync = require('readline-sync');
 
-let num1 = readlineSync.questionInt('digite o primeiro número: ');
-let num2 = readlineSync.questionInt('digite o segundo número: ');
+let num1 = readlineSync.questionFloat('digite o primeiro número: ');
+let num2 = readlineSync.questionFloat('digite o segundo número: ');
 console.log("\nEscolha a operação: \n1. Soma\n2. Subtração\n3. Multiplicação\n4. Divisão");
 let operacao = readlineSync.questionInt('Digite o código de operação: ');
 
