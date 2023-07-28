@@ -8,9 +8,13 @@ let operacao = readlineSync.questionInt('Digite o código de operação: ');
 function calculadora(num1,num2,operacao){
     switch(operacao){
         case 1: return num1 + num2
+            break;
         case 2: return num1 - num2
+            break;
         case 3: return num1 * num2
+            break;
         case 4: return num1 / num2
+            break;
         default: return 0
     }
 }
