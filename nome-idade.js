@@ -14,7 +14,7 @@ while (rodar) {
         }
 
     } catch (error) {
-        console.log("Dados incorretos")
+        console.log("Erro:", error)
 
     }
 }
