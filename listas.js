@@ -1,4 +1,4 @@
-//criar três listas em JavaScript para armazenar nome, idade e cores favoritas de 10 pessoas.
+//criar três listas em JavaScript para armazenar nomes, idades e cores favoritas de 10 pessoas.
 
 let nomes = ['Aurora','Bruna','Chico','Dalva','Elis','Felipe','Gil','Helen','Isa','José'];
 let idades = [28,19,34,58,79,17,38,28,46,54];
@@ -10,7 +10,7 @@ console.log(nomes,idades,cores);
 
 //modificar itens das listas
 
-idades[4] =80;
+idades[4] = 80;
 cores[4] = 'amarelo-dourado';
 
 //imprimir listas novamente
