@@ -25,4 +25,21 @@ adicionar (valor){
     atual.proximo = novoNo;
   }
 }
+get (posicao){
+  if(posicao > -1){
+    let atual = this.cabeca;
+    let i = 0;
+
+    while(atual !== null && i<posicao){
+      atual = atual.proximo;
+      i++
+
+        if (atual !== null){
+          return atual.valor
+        } else{ return undefined;}
+    }
+  }else{
+    return undefined;
+  }
+}
 }
