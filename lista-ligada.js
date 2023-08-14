@@ -16,7 +16,7 @@ class ListaLigada {
     this.cabeca = null;
   }
 
-  // add valor no início
+  // para add valor no início
 adicionar(pessoa){
    if(!this.cabeca){  // checar se já foi inicializado
     this.cabeca = pessoa;
@@ -29,13 +29,13 @@ adicionar(pessoa){
   }
 }
 
-// imprimir lista
+// para imprimir lista
 imprimir(){
   let atual = this.cabeca;
   while(atual){
     console.log(`Nome: ${atual.nome} - Idade: ${atual.idade}`);
     if(atual.filho){
-      console.log(`Filho: ${atual.nome}`);
+      console.log(`Filho: ${atual.filho.nome}`);
     } else { console.log ("Sem filho");}
 
     atual = atual.filho
@@ -43,9 +43,24 @@ imprimir(){
   }
 }
 
-// add as pessoas:
+// criando novos nós:
+const pessoa1 = new No ("Eunice", 100);
+const pessoa2 = new No ("Dalva", 66);
+const pessoa3 = new No ("Odara", 32);
 
+pessoa1.filho = pessoa2;
+pessoa2.filho = pessoa3;
 
+// add os nós a uma nova lista ligada
+
+let lista = new ListaLigada();
+lista.adicionar(pessoa1);
+lista.adicionar(pessoa2);
+lista.adicionar(pessoa3);
+
+//imprimir a lista
+
+lista.imprimir();
 
 
 
