@@ -1,45 +1,53 @@
+
+// implementando a classe Nó (menor estrutura da lista ligada) com os atributos que foram pedidos - Nome e idade. 
+
 class No {
-    constructor(valor){
-        this.valor = valor;
-        this.proximo = null;
+    constructor(nome,idade){
+        this.nome = nome;
+        this.idade = idade;
+        this.filho = null; //considerando o próximo nó como o filho 
     }
 }
 
-class Lista{
-    constructor(){
-        this.cabeca = null;
-    }
+// implementando a classe ListaLigada que define a estrutura e as operações necessárias para a manipulação da lista.
 
+class ListaLigada {
+  constructor() {
+    this.cabeca = null;
+  }
 
-adicionar (valor){
-  const novoNo = new No(valor);
-
-  // checar se já foi inicializado
-  if(this.cabeca === null){
-    this.cabeca = novoNo;
-  }else{
+  // add valor no início
+adicionar(pessoa){
+   if(!this.cabeca){  // checar se já foi inicializado
+    this.cabeca = pessoa;
+  } else {
     let atual = this.cabeca;
-    while(atual.proximo !== null){
-        atual = atual.proximo
+    while(atual.filho){ // iterar para achar qual o último nó (onde o filho é nulo)
+      atual = atual.filho;
     }
-    atual.proximo = novoNo;
+  atual.flho = pessoa;
   }
 }
-get (posicao){
-  if(posicao > -1){
-    let atual = this.cabeca;
-    let i = 0;
 
-    while(atual !== null && i<posicao){
-      atual = atual.proximo;
-      i++
+// imprimir lista
+imprimir(){
+  let atual = this.cabeca;
+  while(atual){
+    console.log(`Nome: ${atual.nome} - Idade: ${atual.idade}`);
+    if(atual.filho){
+      console.log(`Filho: ${atual.nome}`);
+    } else { console.log ("Sem filho");}
 
-        if (atual !== null){
-          return atual.valor
-        } else{ return undefined;}
+    atual = atual.filho
     }
-  }else{
-    return undefined;
   }
 }
-}
+
+// add as pessoas:
+
+
+
+
+
+
+
